@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Auto Road</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ctr-navbar-light">
+      <div class="container " id="navbar-content">
+        <a class="navbar-brand" href="#">Auto<span>road</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ctr-nav"
+          aria-controls="ctr-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon">
+            <i class="far fa-bars"></i>
+          </span>
+          Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ctr-nav">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Trang chủ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Định giá</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Xe</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Bài viết</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Liên hệ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Về chúng tôi</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header-wrap overlay">
+      <!-- <div class="overlay"></div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row header-content">
+              <div class="col-lg-6 col-md-6 block-header ctr-animate-header">
+                <div class="text-intro">
+                  <h1 class="heading">
+                    Ngay bay giờ <br>
+                    Thật dễ dàng cho bạn <br>
+                    Thuê một chiếc xe
+                  </h1>
+                  <p class="descripts">
+                    Chúng tôi đã có nhiều năm hoạt động và đã được các khách hàng sử dụng dịch vụ đánh giá là nơi cho
+                    thuê xe uy tín và chất lượng tốt nhất TP Hà Nội, Thanh Hóa.
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=P9mqCv1yhBE&list=PLUwI-VzEU7zUJ4IwYz7aJ2y7nvvwFvSua&index=1"
+                    class="video">
+                    <span class="icon">
+                      <i class="fas fa-play"></i>
+                    </span>
+                    <p class="present">Các bước đơn giản để thuê một chiếc xe</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 space"></div>
+              <div class="col-lg-4 col-md-6 block-header ctr-animate-header">
+                <div class="wrap-form">
+                  <h1 class="titile">Thực hiện chuyến đi</h1>
+                  <form action="#">
+                    <label for="pickup-location">Chọn địa điểm đến</label><br>
+                    <input class="form-control" type="text" name="location" id="pickup-location"
+                      placeholder="City, Airport, Station, etc"><br>
+                    <label for="drop-location">Chọn địa điểm trả</label><br>
+                    <input class="form-control" type="text" name="location" id="drop-location"
+                      placeholder="City, Airport, Station, etc"><br>
+                    <div class="form-group">
+                      <div class="group-1">
+                        <label for="pickup-date">Thời gian bắt đầu</label> <br>
+                        <input class="form-control" type="date" name="pickup-date" id="pickup-date" placeholder="Date">
+                        <br>
+                      </div>
+                      <div class="group-2 ">
+                        <label for="drop-date">Thời gian kết thúc</label> <br>
+                        <input class="form-control" type="date" name="drop-date" id="drop-date" placeholder="Date"> <br>
+                      </div>
+                    </div>
+                    <input type="submit" value="Tìm kiếm xe" class="btn btn-primary">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <section class="ctr-section search-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search-wrap">
+              <form action="#">
+                <div class="row">
+                  <div class="col-lg">
+                    <label for="model">Chọn mô hình</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <i class="far fa-angle-down"></i>
+                      </div>
+                      <select name="Select model" class="form-control" id="model">
+                        <option value="">Chọn mô hình</option>
+                        <option value="">Model 1</option>
+                        <option value="">Model 2</option>
+                        <option value="">Model 3</option>
+                        <option value="">Model 4</option>
+                        <option value="">Model 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <label for="brand">Chọn chi nhánh</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <i class="far fa-angle-down"></i>
+                      </div>
+                      <select name="Select brand" class="form-control" id="brand">
+                        <option value="">Chọn chi nhánh</option>
+                        <option value="">Brand 1</option>
+                        <option value="">Brand 2</option>
+                        <option value="">Brand 3</option>
+                        <option value="">Brand 4</option>
+                        <option value="">Brand 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <label for="year">Năm xuất bản</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <i class="far fa-angle-down"></i>
+                      </div>
+                      <select name="Year Model" class="form-control" id="year">
+                        <option value="">Năm xuất bản</option>
+                        <option value="">2019</option>
+                        <option value="">2020</option>
+                        <option value="">2021</option>
+                        <option value="">2022</option>
+                        <option value="">2023</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <label for="price">Giới hạn giá</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <i class="far fa-angle-down"></i>
+                      </div>
+                      <select name="Price limit" class="form-control" id="price">
+                        <option value="">100.000 VND</option>
+                        <option value="">200.000 VND</option>
+                        <option value="">300.000 VND</option>
+                        <option value="">400.000 VND</option>
+                        <option value="">500.000 VND</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <div class="form-field">
+                      <input type="submit" value="Tìm kiếm" class="form-control btn btn-primary">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <div class="intro-section">
+              <span>Các dịch vụ của chúng tôi</span>
+              <h2>Dịch vụ của chúng tôi</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="block-services ctr-animate">
+              <div class="header-services">
+                <span class="icon">
+                  <i class="far fa-ambulance"></i>
+                </span>
+                <h3 class="heading">Hỗ trợ xe 24/7</h3>
+              </div>
+              <div class="descript-service">
+                <p>Dịch vụ sửa chữa ô tô lưu động là giải pháp nhanh chóng và tối ưu nhất để khắc phục các sự cố hư hỏng
+                  xảy ra với xế yêu của bạn.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="block-services ctr-animate">
+              <div class="header-services">
+                <span class="icon">
+                  <i class="fal fa-search-location"></i>
+                </span>
+                <h3 class="heading">Nhiều vị trí</h3>
+              </div>
+              <div class="descript-service">
+                <p> Đến với chúng tôi mọi dịch vụ sửa chữa đều được bảo hành chu đáo, kể cả những dịch vụ cứu hộ giao
+                  thông lưu động.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="block-services ctr-animate">
+              <div class="header-services">
+                <span class="icon">
+                  <i class="fas fa-presentation"></i>
+                </span>
+                <h3 class="heading">Đặt chỗ</h3>
+              </div>
+              <div class="descript-service">
+                <p>Xe sạch sẽ. Đặt xe linh động. Quầy thuê xe áp dụng quy định giãn cách
+                  Chúng tôi hợp tác với các đối tác của mình để giúp bạn được an toàn khi lái xe.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="block-services ctr-animate">
+              <div class="header-services">
+                <span class="icon">
+                  <i class="fas fa-car-mechanic"></i>
+                </span>
+                <h3 class="heading">Thuê ô tô</h3>
+              </div>
+              <div class="descript-service">
+                <p>Với nhiều năm kinh nghiệm trong ngành du lịch và cho thuê xe ô tô. Nhân viên của chúng tôi được đào
+                  tạo bài bản, chuyên nghiệp, sẽ làm hài lòng Quý khách.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="offer-sections">
+      <div class="container-fluid px-4">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <div class="intro-section">
+              <span>Những lựa chọn chúng tôi cung cấp</span>
+              <h2>Chọn ô tô</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="container-fluid wrap-products">
+              <div class="row row-products">
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-1.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">AUDI</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-2.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">FORD</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-3.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">CHEVEROLET</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-4.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">MERCEDES</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- </div>
+              <div class="row"> -->
+                <div class="col-lg-3 col-md-4 ">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-5.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">AUDI</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-6.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">FORD</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-7.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">CHEVEROLET</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xbg_2.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">CHEVEROLET</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="block-product">
+                    <div class="img" style="background-image: url('./images/xcar-8.jpg');">
+                      <div class="wrap-price">
+                        <span class="price">$25</span>
+                        <div class="from-day">
+                          <span>Trên</span>
+                          <span>/ Ngày</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-desripts">
+                      <h2>
+                        <a href="#">Mercedes Grand Sedan</a>
+                      </h2>
+                      <span class="manufact">MERCEDES</span>
+                      <div class="booking">
+                        <a href="#" class="btn me-1">Thuê ngay</a>
+                        <a href="#" class="btn ms-1">Chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="work-sections overlay">
+      <div class="container">
+        <div class="row ctr-animate">
+          <div class="col-md-12 title send-up">
+            <span>Luồng công việc</span>
+            <h2>Thực hiện công việc</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-3 send-up">
+                <div class="group-work">
+                  <div class="icon">
+                    <i class="far fa-ambulance"></i>
+                  </div>
+                  <h3>Chọn điểm đến</h3>
+                  <div class="descripts">
+                    <p>
+                      Dịch vụ sửa chữa ô tô lưu động là giải pháp nhanh chóng và
+                      tối ưu nhất để khắc phục các sự cố hư hỏng xảy ra với xế yêu của bạn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 send-up">
+                <div class="group-work">
+                  <div class="icon">
+                    <i class="fal fa-search-location"></i>
+                  </div>
+                  <h3>Chọn điểm đến</h3>
+                  <div class="descripts">
+                    <p>
+                      Đến với chúng tôi mọi dịch vụ sửa chữa đều
+                      được bảo hành chu đáo, kể cả những dịch vụ cứu hộ giao
+                      thông lưu động.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 send-up">
+                <div class="group-work">
+                  <div class="icon">
+                    <i class="fas fa-presentation"></i>
+                  </div>
+                  <h3>Chọn điểm đến</h3>
+                  <div class="descripts">
+                    <p>
+                      Xe sạch sẽ. Đặt xe linh động. Quầy thuê xe áp dụng quy
+                      định giãn cách Chúng tôi hợp tác với các
+                      đối tác của mình để giúp bạn được an toàn khi lái xe.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 send-up">
+                <div class="group-work">
+                  <div class="icon">
+                    <i class="fas fa-car-mechanic"></i>
+                  </div>
+                  <h3>Chọn điểm đến</h3>
+                  <div class="descripts">
+                    <p>
+                      Với nhiều năm kinh nghiệm trong ngành du lịch và cho thuê xe ô tô.
+                      Nhân viên của chúng tôi được đào tạo bài bản, chuyên nghiệp, sẽ làm hài lòng Quý khách.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="container">
+        <div class="intro-section">
+          <span>TESTIMONIAL</span>
+          <h2>Khách hàng vui vẻ</h2>
+        </div>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1">
+              <span class="dot"></span>
+            </button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2">
+              <span class="dot"></span>
+            </button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3">
+              <span class="dot"></span>
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000000">
+              <div class=" block-clents row">
+                <div class="img col-md-4">
+                  <img src="./images/xperson_1.jpg" alt="xperson_1.jpg">
+                </div>
+                <div class="col-md-8 text-descripts">
+                  <p>Sứ mệnh của chúng tôi là lan tỏa tri thức đến tất cả mọi người, với mong muốn cung cấp những cuốn
+                    sách hay có chọn lọc trong vô vàn cuốn sách, chúng tôi luôn đem đến giá trị tốt nhất cho người đọc.
+                  </p>
+                  <span class="name">Roger Scott</span>
+                  <span class="position">Web Developer</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="20000000">
+              <div class=" block-clents row">
+                <div class="img col-md-4">
+                  <img src="./images/xperson_1.jpg" alt="xperson_1.jpg">
+                </div>
+                <div class="col-md-8 text-descripts">
+                  <p>Sứ mệnh của chúng tôi là lan tỏa tri thức đến tất cả mọi người, với mong muốn cung cấp những cuốn
+                    sách hay có chọn lọc trong vô vàn cuốn sách, chúng tôi luôn đem đến giá trị tốt nhất cho người đọc.
+                  </p>
+                  <span class="name">Roger Scott</span>
+                  <span class="position">Web Developer</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class=" block-clents row">
+                <div class="img col-md-4">
+                  <img src="./images/xperson_1.jpg" alt="xperson_1.jpg">
+                </div>
+                <div class="col-md-8 text-descripts">
+                  <p>Sứ mệnh của chúng tôi là lan tỏa tri thức đến tất cả mọi người, với mong muốn cung cấp những cuốn
+                    sách hay có chọn lọc trong vô vàn cuốn sách, chúng tôi luôn đem đến giá trị tốt nhất cho người đọc.
+                  </p>
+                  <span class="name">Roger Scott</span>
+                  <span class="position">Web Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="about-sections">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-6 img">
+              </div>
+              <div class="col-md-6">
+                <div class="text ctr-animate">
+                  <div class="intro-section">
+                    <span>TESTIMONIAL</span>
+                    <h2>Khách hàng vui vẻ</h2>
+                  </div>
+                  <div class="paragraph">
+                    <p>Một con sông nhỏ có tên Duden chảy qua nơi họ ở và cung cấp cho nó những
+                      chất dinh dưỡng cần thiết.
+                      Đó là một đất nước hoang tưởng, trong đó các phần rang của câu bay vào miệng của bạn.</p>
+                    <p>Trên đường đi, cô đã gặp một bản sao. Bản sao cảnh báo Văn bản Người mù, rằng nơi xuất phát của
+                      nó
+                      sẽ được viết lại hàng nghìn lần và mọi thứ còn lại từ nguồn gốc của nó sẽ là từ "và" và Văn bản
+                      Người mù nhỏ nên quay lại và trở lại như cũ, đất nước an toàn. Nhưng không có gì bản sao nói có
+                      thể
+                      thuyết phục cô ấy và vì vậy không mất nhiều thời gian cho đến khi một vài Copy Writers quỷ quyệt
+                      phục kích cô ấy, làm cho cô ấy say rượu với Longe và Parole và kéo cô ấy vào cơ quan của họ, nơi
+                      họ
+                      lạm dụng cô ấy vì họ.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-sections">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="intro-section">
+              <span>Bài viết</span>
+              <h2>Bài viết gần đây</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="blog-entry">
+                  <a href="#" class="blog-img" style="background-image: url('./images/ximage_1.jpg');">
+                  </a>
+                  <div class="text-intro">
+                    <div class="meta">
+                      <div class="time">
+                        <a href="#">Tháng 11. 05, 2020</a>
+                      </div>
+                      <div class="poster">
+                        Admin
+                      </div>
+                      <div class="comment">
+                        <span class="icon">
+                          <i class="fas fa-comment-alt-lines"></i>
+                        </span>
+                        6
+                      </div>
+                    </div>
+                    <div class="title-blog">
+                      <a href="#">
+                        Tại sao tạo khách hàng tiềm năng là chìa khóa để tăng trưởng kinh doanh
+                      </a>
+                    </div>
+                    <div class="desripts">
+                      Dịch vụ sửa chữa ô tô lưu động là giải pháp nhanh chóng và tối ưu nhất để khắc phục các sự cố hư
+                      hỏng xảy ra với xế yêu của bạn.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-entry">
+                  <a href="#" class="blog-img" style="background-image: url('./images/ximage_2.jpg');">
+                  </a>
+                  <div class="text-intro">
+                    <div class="meta">
+                      <div class="time">
+                        <a href="#">Tháng 11. 05, 2020</a>
+                      </div>
+                      <div class="poster">
+                        Admin
+                      </div>
+                      <div class="comment">
+                        <span class="icon">
+                          <i class="fas fa-comment-alt-lines"></i>
+                        </span>
+                        6
+                      </div>
+                    </div>
+                    <div class="title-blog">
+                      <a href="#">
+                        Tại sao tạo khách hàng tiềm năng là chìa khóa để tăng trưởng kinh doanh
+                      </a>
+                    </div>
+                    <div class="desripts">
+                      Dịch vụ sửa chữa ô tô lưu động là giải pháp nhanh chóng và tối ưu nhất để khắc phục các sự cố hư
+                      hỏng xảy ra với xế yêu của bạn.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-entry">
+                  <a href="#" class="blog-img" style="background-image: url('./images/ximage_3.jpg');">
+                  </a>
+                  <div class="text-intro">
+                    <div class="meta">
+                      <div class="time">
+                        <a href="#">Tháng 11. 05, 2020</a>
+                      </div>
+                      <div class="poster">
+                        Admin
+                      </div>
+                      <div class="comment">
+                        <span class="icon">
+                          <i class="fas fa-comment-alt-lines"></i>
+                        </span>
+                        6
+                      </div>
+                    </div>
+                    <div class="title-blog">
+                      <a href="#">
+                        Tại sao tạo khách hàng tiềm năng là chìa khóa để tăng trưởng kinh doanh
+                      </a>
+                    </div>
+                    <div class="desripts">
+                      Dịch vụ sửa chữa ô tô lưu động là giải pháp nhanh chóng và tối ưu nhất để khắc phục các sự cố hư
+                      hỏng xảy ra với xế yêu của bạn.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="group-footer">
+                <div class="heading">
+                  <h2>Về Autoroad</h2>
+                  <p>Xa xa, đằng sau những ngọn núi chữ, xa những quốc gia Vokalia và Consonantia, có những văn tự mù
+                    mịt.</p>
+                </div>
+                <div class="social-icons">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span class="icon">
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="group-footer">
+                <h2>Thông tin</h2>
+                <ul class="list-op">
+                  <li class="sub-op">
+                    Về chúng tôi
+                  </li>
+                  <li class="sub-op">
+                    Dịch vụ
+                  </li>
+                  <li class="sub-op">
+                    Điều khoản và Điều kiện
+                  </li>
+                  <li class="sub-op">
+                    Đảm bảo giá tốt nhất
+                  </li>
+                  <li class="sub-op">
+                    Chính sách Bảo mật & Cookie
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="group-footer">
+                <h2>Hỗ trợ khách hàng</h2>
+                <ul class="list-op">
+                  <li class="sub-op">
+                    FAQ
+                  </li>
+                  <li class="sub-op">
+                    Phương thức thanh toán
+                  </li>
+                  <li class="sub-op">
+                    Mẹo đặt hàng
+                  </li>
+                  <li class="sub-op">
+                    Cách hoạt động
+                  </li>
+                  <li class="sub-op">
+                    Liên hệ với chúng tôi
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="group-footer">
+                <h2>Câu hỏi ?</h2>
+                <ul class="list-op ">
+                  <li class="sub-op location">
+                    Hoằng Hà, Hoằng Hóa, Thanh Hóa
+                  </li>
+                  <li class="sub-op sdt">
+                    +0975107636
+                  </li>
+                  <li class="sub-op gmail">
+                    Trungdongfym@gmail.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="copyright d-flex">
+            <p>Copyright ©2021. Tất cả các quyền được bảo lưu. </p>
+            <span class="ms-2">
+              <i class="fas fa-heart"></i>
+              bởi Trung Đông
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="to-top" id="scroll-top">
+    <span class="icon">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </div>
+  <script src="./javascripts/custom.js"></script>
+</body>
+
+</html>
